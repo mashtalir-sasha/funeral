@@ -1,53 +1,19 @@
 $(function() {
 
-	// Скролинг по якорям
-	$('.anchor').bind("click", function(e){
-		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top-106 // отступ от меню
-		}, 500);
-	e.preventDefault();
-	});
-
 	// Меню при скроле
 	$(window).scroll(function(){
 		var topline = $(window).scrollTop();
 		if ( topline > 650 ) {
-			$(".posf").addClass('show');
+			$(".nav-fixed").addClass('show');
 		} else {
-			$(".posf").removeClass('show');
+			$(".nav-fixed").removeClass('show');
 		};
 	});
 
-	// Клик по гамбургеру на моб версии
-	$('.mob-mnu__humb').click(function() {
-		$('.mob-mnu-list').toggleClass('show');
-	});
-	$('.mob-mnu__li').click(function() {
-		$('.mob-mnu-list').removeClass('show');
-	});
-
-	// Формирование полей и заголовков формы в мод окне
-	$('.modal').click(function(){
-		var ttl = $(this).data('title');
-		var subTtl = $(this).data('subtitle');
-		var text = $(this).data('text');
-		var btn = $(this).data('btn');
-		var goal = $(this).data('goal');
-		var subject = $(this).data('subject');
-		$('.ttl').html(ttl);
-		$('.subTtl').html(subTtl);
-		$('.text').html(text);
-		$('.btn').html(btn);
-		$('.goal').val(goal);
-		$('.subject').val(subject);
-	});
-
 	// Отправка формы
-	$('[data-ajax="true"]').submit(function() {
+	$('form').submit(function() {
 		var data = $(this).serialize();
 		var goalId = $(this).find('input[ name="goal"]').val();
-		data += '&ajax-request=true';
 		$.ajax({
 			type: 'POST',
 			url: 'mail.php',
@@ -63,20 +29,7 @@ $(function() {
 		return false;
 	});
 
-	// Инит фансибокса
-	$('.fancybox, .modal').fancybox({
-		margin: 0,
-		padding: 0
-	});
-
-	//Якорь наверх
-	$("[href='#top']").click(function(e){
-		$('html, body').stop().animate({
-			scrollTop: $('#top').offset().top
-		}, 300);
-		e.preventDefault();
-	});
-
+	// Автовисота шагов формы
 	var stepHeight1 = $('.step1').outerHeight();
 	$('.step-height').css('height', stepHeight1);
 	$('.step1 .step__patern').css('height', stepHeight1);
@@ -102,31 +55,137 @@ $(function() {
 	$('.step4 .step__patern').css('margin-left', -stepHeight4/2);
 	$('.step4 .step__patern').css('margin-top', -stepHeight4/2);
 
-});
+	$('.step1 .step-next').click(function() {
+		$('.step1').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step2').css({'left':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step3').css({'left':'45%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step4').css({'left':'95%','top':'-20%', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step2').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+		$('.step-numb').removeClass('active');
+		$('.step-numb.numb2').addClass('active');
+	});
 
-$(window).on('load', function() {
+	$('.step2 .step-next').click(function() {
+		$('.step2').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step3').css({'left':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step4').css({'left':'45%','top':'0', 'z-index':'-1'});
+		$('.step1').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step3').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+		$('.step-numb').removeClass('active');
+		$('.step-numb.numb3').addClass('active');
+	});
 
-	var mh = 0;
-	$(".packages").each(function () {
-		var h_block = $(".package.active").outerHeight();
-		mh = h_block;
+	$('.step3 .step-next').click(function() {
+		$('.step2').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step3').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step4').css({'left':'0','top':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step1').css({'left':'-200%', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step4').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+		$('.step-numb').removeClass('active');
+		$('.step-numb.numb4').addClass('active');
+	});
+
+	$('.step-numb.numb1').click(function() {
+		$('.step-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.step1').css({'left':'', 'top':'', 'opacity':'', 'z-index':'1'});
+		$('.step2').css({'left':'', 'top':'', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step3').css({'left':'', 'top':'', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step4').css({'left':'', 'top':'', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step1').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+		$('.step-numb').removeClass('active');
+		$('.step-numb.numb1').addClass('active');
+	});
+
+	$('.step-numb.numb2').click(function() {
+		$('.step-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.step1').css({'left':'-100%', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step2').css({'left':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step3').css({'left':'45%','top':'-0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step4').css({'left':'95%','top':'-20%', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step2').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+	});
+
+	$('.step-numb.numb3').click(function() {
+		$('.step-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.step2').css({'left':'-100%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step3').css({'left':'0','top':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step4').css({'left':'45%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step1').css({'left':'-100%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step3').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+	});
+
+	$('.step-numb.numb4').click(function() {
+		$('.step-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.step2').css({'left':'-100%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step3').css({'left':'-100%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		$('.step4').css({'left':'0','top':'0', 'opacity':'1', 'z-index':'1'});
+		$('.step1').css({'left':'-100%','top':'0', 'opacity':'0.5', 'z-index':'-1'});
+		var stepHeight1 = $('.step4').outerHeight();
+		$('.step-height').css('height', stepHeight1);
+	});
+
+	// Слайдер пакетов
+	$('.package-numb.numb1').click(function() {
+		$('.package-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.package1').addClass('active').css('left', '').siblings().removeClass('active');
+		$('.package2').css({'left':'', 'opacity':''});
+		$('.package3').css({'left':'', 'opacity':''});
+		$('.package4').css({'left':'', 'opacity':''});
+		var mh = $('.package1').outerHeight();
 		$(".package-height").height(mh);
 	});
 
 	$('.package2').click(function() {
 		$(this).addClass('active').css({'left':'0', 'opacity':'1'}).siblings().removeClass('active');
 		$('.package1').css('left', '-100%');
-		$('.package3').css('left', '70%');
+		$('.package3').css('left', '78%');
 		$('.package4').css('left', '120%');
 		var mh = $(this).outerHeight();
+		$(".package-height").height(mh);
+		$('.package-numb').removeClass('active');
+		$('.package-numb.numb2').addClass('active');
+	});
+
+	$('.package-numb.numb2').click(function() {
+		$('.package-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.package2').addClass('active').css({'left':'0', 'opacity':'1'}).siblings().removeClass('active');
+		$('.package1').css('left', '-100%');
+		$('.package3').css('left', '78%');
+		$('.package4').css('left', '120%');
+		var mh = $('.package2').outerHeight();
 		$(".package-height").height(mh);
 	});
 
 	$('.package3').click(function() {
 		$(this).addClass('active').css('left','0').siblings().removeClass('active');
 		$('.package2').css('left', '-100%');
-		$('.package4').css('left', '70%');
+		$('.package4').css('left', '78%');
 		var mh = $(this).outerHeight();
+		$(".package-height").height(mh);
+		$('.package-numb').removeClass('active');
+		$('.package-numb.numb3').addClass('active');
+	});
+
+	$('.package-numb.numb3').click(function() {
+		$('.package-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.package3').addClass('active').css('left','0').siblings().removeClass('active');
+		$('.package2').css('left', '-100%');
+		$('.package4').css('left', '78%');
+		$('.package1').css('left', '-200%');
+		var mh = $('.package3').outerHeight();
 		$(".package-height").height(mh);
 	});
 
@@ -135,6 +194,28 @@ $(window).on('load', function() {
 		$('.package3').css('left', '-100%');
 		var mh = $(this).outerHeight();
 		$(".package-height").height(mh);
+		$('.package-numb').removeClass('active');
+		$('.package-numb.numb4').addClass('active');
 	});
 
+	$('.package-numb.numb4').click(function() {
+		$('.package-numb').removeClass('active');
+		$(this).addClass('active');
+		$('.package4').addClass('active').css('left','0').siblings().removeClass('active');
+		$('.package3').css('left', '-100%');
+		$('.package2').css('left', '-150%');
+		$('.package1').css('left', '-200%');
+		var mh = $('.package4').outerHeight();
+		$(".package-height").height(mh);
+	});
+	
+});
+
+$(window).on('load', function() {
+	var mh = 0;
+	$(".packages").each(function () {
+		var h_block = $(".package.active").outerHeight();
+		mh = h_block;
+		$(".package-height").height(mh);
+	});
 });

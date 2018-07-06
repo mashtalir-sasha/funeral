@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Funeral</title>
+	<title>Феникс - Похоронное бюро</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -32,16 +32,37 @@
 			<div class="line line_6"></div>
 		</div>
 
+		<nav class="nav-fixed">
+			<div class="container-fluid">
+				<div class="row nav align-items-center">
+					<div class="col-lg-3 offset-lg-1 col-sm-4 padding d-none d-sm-block">
+						<p class="nav__note">Помогаем людям с 2004 года</p>
+					</div>
+					<div class="col-sm-4 col-xs-6 col-6 padding">
+						<img src="img/logo.svg" alt="Феникс" class="nav__logo img-r">
+					</div>
+					<div class="col-lg-3 col-sm-4 col-xs-6 col-6 padding">
+						<div class="nav-phone">
+							<p class="nav-phone__txt">Круглосуточная горячая линия</p>
+							<a href="tel:+380678473595" class="nav-phone__link">+38 (067) 847-35-95</a>
+							<a href="tel:+380443533430" class="nav-phone__link">+38 (044) 353-34-30</a>
+							<a href="tel:+380931533480" class="nav-phone__link">+38 (093) 153-34-80</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
 		<header class="head">
 			<div class="container-fluid">
 				<div class="row nav align-items-center">
-					<div class="col-lg-3 offset-lg-1">
+					<div class="col-lg-3 offset-lg-1 col-sm-4 d-none d-sm-block padding">
 						<p class="nav__note">Помогаем людям с 2004 года</p>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-sm-4 col-xs-6 col-6 padding">
 						<img src="img/logo.svg" alt="Феникс" class="nav__logo img-r">
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-sm-4 col-xs-6 col-6 padding">
 						<div class="nav-phone">
 							<p class="nav-phone__txt">Круглосуточная горячая линия</p>
 							<a href="tel:+380678473595" class="nav-phone__link">+38 (067) 847-35-95</a>
@@ -53,7 +74,7 @@
 			</div>
 			<div class="container-fluid min-h">
 				<div class="row min-h">
-					<div class="col-lg-7 offset-lg-1 col-xl-6 align-self-center">
+					<div class="col-lg-7 offset-lg-1 col-xl-6 align-self-center padding">
 						<div class="head-ttl">
 							<div class="head-ttl__line head-ttl__line_l1"></div>
 							<div class="head-ttl__line head-ttl__line_l2"></div>
@@ -64,10 +85,10 @@
 							<h1 class="head-ttl__txt">Полный спектр ритуальных услуг, организация похорон и поминок <span>“под ключ”</span> в Киеве и Киевской области</h1>
 						</div>
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-sm-6">
 								<p class="head__txt head__txt_t1">Выезд ритуального агента круглосуточно, в течение 1 часа после обращения</p>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-sm-6">
 								<p class="head__txt head__txt_t2">Соблюдаем национальные традиции и требования всех проживающих в Украине народов</p>
 							</div>
 						</div>
@@ -79,13 +100,15 @@
 		<section class="certificate">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-5">
+					<div class="col-lg-5 col-md-6 padding">
 						<img src="img/certificate_img.png" alt="Феникс" class="certificate__img img-r">
 						<div class="certificate__patern"></div>
 					</div>
-					<div class="col-lg-5">
+					<div class="col-lg-5 col-md-6 padding">
 						<h3 class="certificate__ttl">От вас нужно только ВРАЧЕБНОЕ свидетельство о смерти покойного <span>Все остальное мы сделаем сами</span></h3>
-						<form class="certificate-form form_check" autocomplete="off">
+						<form class="certificate-form form_check" autocomplete="off" data-ajax="true">
+							<input type="hidden" name="title" value="Вызов ритуального агента">
+							<input type="hidden" name="goal" value="goal2">
 							<p class="certificate-form__txt">Вызовите ритуального агента.<br>В течение 1 часа после оформления заявки он будет у вас.<br>Круглосуточно.</p>
 							<div class="rline">
 								<input type="text" name="phone" placeholder="Введите Ваш номер телефона" class="certificate-form__input rfield phonefield">
@@ -103,7 +126,7 @@
 		<section class="packages">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-12 padding">
 						<div class="packages-ttl">
 							<h3 class="packages-ttl__ttl">Вам не нужно ни о чем беспокоится</h3>
 							<p class="packages-ttl__txt">Мы создали 3 удобных пакета услуг под разный бюджет. Независимо от выбранного пакета, мы делаем все “под ключ”.</p>
@@ -111,8 +134,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-8 offset-lg-1">
-						<div class="package clearfix">
+					<div class="col offset-lg-1 package-height">
+						<div class="package package1 active clearfix">
 							<h3 class="package__ttl">Пакет <span>“Социальный”</span></h3>
 							<div class="package-left">
 								<div class="package-left__line package-left__line_l1"></div>
@@ -129,7 +152,6 @@
 									<li class="package__item">Церковный набор</li>
 									<li class="package__item">Могильный крест (сосновый)</li>
 									<li class="package__item">Венок из искусственных цветов (2шт)</li>
-									<li class="package__item">Катафальный транспорт на 20 посадочных мест (по городу)</li>
 									<li class="package__item">Похоронная бригада (4 человека)</li>
 									<li class="package__item">Доставка предметов ритуала</li>
 									<li class="package__item">Оформление организации похорон</li>
@@ -137,8 +159,143 @@
 								<img src="img/package1.svg" alt="Феникс" class="package__img img-r">
 							</div>
 							<div class="package-right">
-								<div class="package__price">4500 грн</div>
+								<div class="package__price">от 3000 грн</div>
 								<a href="#" class="package__btn fabcybox">Заказать пакет услуг</a>
+							</div>
+						</div>
+						<div class="package package2 clearfix">
+							<h3 class="package__ttl">Пакет <span>“Стандарт”</span></h3>
+							<div class="package-left">
+								<div class="package-left__line package-left__line_l1"></div>
+								<div class="package-left__line package-left__line_l2"></div>
+								<div class="package-left__line package-left__line_l3"></div>
+								<div class="package-left__line package-left__line_l4"></div>
+								<div class="package-left__line package-left__line_l5"></div>
+								<div class="package-left__line package-left__line_l6"></div>
+								<div class="package-left__line package-left__line_l7"></div>
+								<div class="package-left__line package-left__line_l8"></div>
+								<ul class="package__ul">
+									<li class="package__item">Гроб лакированный</li>
+									<li class="package__item">Похоронный комплект: покрывало (атлас), подушка</li>
+									<li class="package__item">Церковный набор</li>
+									<li class="package__item">Могильный крест (сосновый/дубовый)</li>
+									<li class="package__item">Венок из искусственных цветов 180 см (4 шт)</li>
+									<li class="package__item">Сопровождающий ритуальный транспорт на 15 - 22 посадочных мест</li>
+									<li class="package__item">Похоронная бригада (4 человека)</li>
+									<li class="package__item">Доставка предметов ритуала</li>
+									<li class="package__item">Оформление организации похорон</li>
+									<li class="package__item">Священник, Распорядитель похорон</li>
+									<li class="package__item">Ритуальные полотенца (2 шт), ритуальные платки</li>
+									<li class="package__item">Выезд ритуального агента к заказчику и сопровождение</li>
+									<li class="package__item">Оформление пакета документов</li>
+									<li class="package__item">Фотопортрет (2шт)</li>
+								</ul>
+								<img src="img/package2.svg" alt="Феникс" class="package__img img-r">
+							</div>
+							<div class="package-right">
+								<div class="package__price">от 5500 грн</div>
+								<a href="#" class="package__btn fabcybox">Заказать пакет услуг</a>
+							</div>
+						</div>
+						<div class="package package3 clearfix">
+							<h3 class="package__ttl">Пакет <span>“Премиум”</span></h3>
+							<div class="package-left">
+								<div class="package-left__line package-left__line_l1"></div>
+								<div class="package-left__line package-left__line_l2"></div>
+								<div class="package-left__line package-left__line_l3"></div>
+								<div class="package-left__line package-left__line_l4"></div>
+								<div class="package-left__line package-left__line_l5"></div>
+								<div class="package-left__line package-left__line_l6"></div>
+								<div class="package-left__line package-left__line_l7"></div>
+								<div class="package-left__line package-left__line_l8"></div>
+								<ul class="package__ul">
+									<li class="package__item">Гроб лакированный двухкришечный (премиум класса)</li>
+									<li class="package__item">Похоронный комплект (премиум)</li>
+									<li class="package__item">Церковный набор</li>
+									<li class="package__item">Могильный крест (авторский)</li>
+									<li class="package__item">Венок авторский из живых цветов 180 см (4 шт)</li>
+									<li class="package__item">Сопровождающий микроавтобус (Mercedes) на 20 посадочных мест (по городу) (2 шт)</li>
+									<li class="package__item">Похоронно-сервисная бригада (6 человек)</li>
+									<li class="package__item">Доставка предметов ритуала</li>
+									<li class="package__item">Оформление организации похорон</li>
+									<li class="package__item">Священник, церемониймейстер похорон</li>
+									<li class="package__item">Ритуальные полотенца (2 шт), ритуальные платки</li>
+									<li class="package__item">Выезд ритуального агента к заказчику и полное сопровождение</li>
+									<li class="package__item">Оформление пакета документов</li>
+									<li class="package__item">Фотопортрет (2 шт), лифт ритуальный</li>
+									<li class="package__item">Музыканты (саксофон, скрипка, духовой оркестр)</li>
+									<li class="package__item">Шатер для прощания на месте захоронения</li>
+									<li class="package__item">Драпировка тканью могилы</li>
+									<li class="package__item">Экибана авторская на крышку гроба из живых цветов</li>
+									<li class="package__item">Сопровождение скорой помощи</li>
+								</ul>
+								<img src="img/package1.svg" alt="Феникс" class="package__img img-r">
+							</div>
+							<div class="package-right">
+								<div class="package__price">Расчитывается индивидуально</div>
+								<a href="#" class="package__btn fabcybox">Заказать пакет услуг</a>
+							</div>
+						</div>
+						<div class="package package4 clearfix">
+							<h3 class="package__ttl">Пакет <span>“Кремация”</span></h3>
+							<div class="package-left">
+								<div class="package-left__line package-left__line_l1"></div>
+								<div class="package-left__line package-left__line_l2"></div>
+								<div class="package-left__line package-left__line_l3"></div>
+								<div class="package-left__line package-left__line_l4"></div>
+								<div class="package-left__line package-left__line_l5"></div>
+								<div class="package-left__line package-left__line_l6"></div>
+								<div class="package-left__line package-left__line_l7"></div>
+								<div class="package-left__line package-left__line_l8"></div>
+								<ul class="package__ul">
+									<li class="package__item">Гроб (оббитый тканью)</li>
+									<li class="package__item">Постель, подушка</li>
+									<li class="package__item">Покрывало белое или церковное</li>
+									<li class="package__item">Плечевая бригада для транспартировки гроба</li>
+									<li class="package__item">Катафальный транспорт для гроба и транспорт для гостей</li>
+									<li class="package__item">Полное сопровождение в подготовке к похоронам организатором, консультации по телефону и лично</li>
+									<li class="package__item">Выезд агента на дом</li>
+									<li class="package__item">Оформление необходимых документов</li>
+								</ul>
+								<img src="img/package4.svg" alt="Феникс" class="package__img img-r">
+							</div>
+							<div class="package-right">
+								<div class="package__price">от 3000 грн</div>
+								<a href="#" class="package__btn fabcybox">Заказать пакет услуг</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs col-6 offset-lg-1">
+						<div class="package-numb numb1 active">
+							<div class="package-numb__wrap">
+								<span>01</span>
+								<p>Социальный</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs col-6">
+						<div class="package-numb numb2">
+							<div class="package-numb__wrap">
+								<span>02</span>
+								<p>Стандарт</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs col-6">
+						<div class="package-numb numb3">
+							<div class="package-numb__wrap">
+								<span>03</span>
+								<p>Премиум</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs col-6 offset-lg-1-right">
+						<div class="package-numb numb4">
+							<div class="package-numb__wrap">
+								<span>04</span>
+								<p>Кремация</p>
 							</div>
 						</div>
 					</div>
@@ -147,10 +304,12 @@
 		</section>
 
 		<section class="form">
-			<form>
+			<form class="form_check">
+				<input type="hidden" name="title" value="Подбор необходимых услуг">
+				<input type="hidden" name="goal" value="goal1">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-5 offset-lg-1">
+						<div class="col-lg-6 col-xl-5 offset-lg-1">
 							<div class="form-ttl">
 								<div class="form-ttl__line form-ttl__line_l1"></div>
 								<div class="form-ttl__line form-ttl__line_l2"></div>
@@ -164,79 +323,171 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col">
+						<div class="col step-height">
 							<div class="step step1">
 								<div class="step__numb">Шаг 1<span>/4</span></div>
 								<div class="step__patern"></div>
 								<h4 class="step__ttl">Подготовка</h4>
 								<label class="step-label">
-									<input type="checkbox" name="prepare1">
+									<input type="checkbox" name="prepare1" value="Помощь в подборе места на кладбище">
 									<span class="step-label__txt">Помощь в подборе места на кладбище</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare2">
+									<input type="checkbox" name="prepare2" value="Груз 200 (международные перевозки)">
 									<span class="step-label__txt">Груз 200 (международные перевозки)</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare3">
+									<input type="checkbox" name="prepare3" value="Реставрация лица и частей тела">
 									<span class="step-label__txt">Реставрация лица и частей тела</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare4">
+									<input type="checkbox" name="prepare4" value="Гроб на выбор">
 									<span class="step-label__txt">Гроб на выбор</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare5">
+									<input type="checkbox" name="prepare5" value="Катафалк на выбор">
 									<span class="step-label__txt">Катафалк на выбор</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare6">
+									<input type="checkbox" name="prepare6" value="Сопровождающий микроавтобус">
 									<span class="step-label__txt">Сопровождающий микроавтобус</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare7">
+									<input type="checkbox" name="prepare7" value="Венки на выбор">
 									<span class="step-label__txt">Венки на выбор</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare8">
+									<input type="checkbox" name="prepare8" value="Ритуальная одежда на выбор">
 									<span class="step-label__txt">Ритуальная одежда на выбор</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare9">
+									<input type="checkbox" name="prepare9" value="Похоронный комплект: покрывало, подушка">
 									<span class="step-label__txt">Похоронный комплект: покрывало, подушка</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare10">
+									<input type="checkbox" name="prepare10" value="Церковный погребальный набор">
 									<span class="step-label__txt">Церковный погребальный набор</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare11">
+									<input type="checkbox" name="prepare11" value="Могильный крест (дубовый)">
 									<span class="step-label__txt">Могильный крест (дубовый)</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare12">
+									<input type="checkbox" name="prepare12" value="Ритуальные полотенца (2 шт), ритуальные платк">
 									<span class="step-label__txt">Ритуальные полотенца (2 шт), ритуальные платки</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare13">
-									<span class="step-label__txt">Оформление пакета документов </span>
+									<input type="checkbox" name="prepare13" value="Оформление пакета документов">
+									<span class="step-label__txt">Оформление пакета документов</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare14">
+									<input type="checkbox" name="prepare14" value="Фотопортрет (2шт)">
 									<span class="step-label__txt">Фотопортрет (2шт)</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare15">
+									<input type="checkbox" name="prepare15" value="Саван православный">
 									<span class="step-label__txt">Саван православный</span>
 								</label>
 								<label class="step-label">
-									<input type="checkbox" name="prepare16">
+									<input type="checkbox" name="prepare16" value="Сопровождение скорой помощи">
 									<span class="step-label__txt">Сопровождение скорой помощи</span>
 								</label>
-								<button class="step-next">Далее</button>
+								<a class="step-next">Далее</a>
+							</div>
+
+							<div class="step step2">
+								<div class="step__numb">Шаг 2<span>/4</span></div>
+								<div class="step__patern"></div>
+								<h4 class="step__ttl">Участники</h4>
+								<label class="step-label">
+									<input type="checkbox" name="member1" value="Ритуальный агент (выезд к заказчику и сопровождение)">
+									<span class="step-label__txt">Ритуальный агент (выезд к заказчику и сопровождение)</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="member2" value="Похоронная бригада до 6 чел. (вынос покойного)">
+									<span class="step-label__txt">Похоронная бригада до 6 чел. (вынос покойного)</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="member3" value="Священник">
+									<span class="step-label__txt">Священник</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="member4" value="Распорядитель похорон">
+									<span class="step-label__txt">Распорядитель похорон</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="member5" value="Музыканты (саксофон, скрипка, духовой оркестр)">
+									<span class="step-label__txt">Музыканты (саксофон, скрипка, духовой оркестр)</span>
+								</label>
+								<a class="step-next">Далее</a>
+							</div>
+
+							<div class="step step3">
+								<div class="step__numb">Шаг 3<span>/4</span></div>
+								<div class="step__patern"></div>
+								<h4 class="step__ttl">Дополнительные услуги</h4>
+								<label class="step-label">
+									<input type="checkbox" name="additional1" value="Оформление организации похорон">
+									<span class="step-label__txt">Оформление организации похорон</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="additional2" value="Драпировка тканью могилы">
+									<span class="step-label__txt">Драпировка тканью могилы</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="additional3" value="Экибана авторская на крышку гроба из живых цветов">
+									<span class="step-label__txt">Экибана авторская на крышку гроба из живых цветов</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="additional4" value="Шатер (для прощания на месте захоронения)">
+									<span class="step-label__txt">Шатер (для прощания на месте захоронения)</span>
+								</label>
+								<label class="step-label">
+									<input type="checkbox" name="additional5" value="Организация поминального обеда">
+									<span class="step-label__txt">Организация поминального обеда</span>
+								</label>
+								<a class="step-next">Далее</a>
+							</div>
+
+							<div class="step step4">
+								<div class="step__numb">Шаг 4<span>/4</span></div>
+								<div class="step__patern"></div>
+								<h4 class="step__ttl">Оформление заказа</h4>
+								<div class="step-form">
+									<p class="step-form__txt">Для оформления заказа оставьте свои контактные данные и с вами свяжется наш ритуальный агент в течение 12 минут</p>
+									<div class="rline">
+										<input type="text" name="name" placeholder="Ваше имя" class="step-form__input rfield">
+									</div>
+									<div class="rline">
+										<input type="text" name="phone" placeholder="Ваш номер телефона" class="step-form__input rfield phonefield">
+									</div>
+									<button class="step-form__btn btnsubmit">Оформить заказ</button>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="row">
+					<div class="col-xs col-6 offset-lg-1">
+						<div class="step-numb numb1 active">
+							<span>01</span>
+						</div>
+					</div>
+					<div class="col-xs col-6">
+						<div class="step-numb numb2">
+							<span>02</span>
+						</div>
+					</div>
+					<div class="col-xs col-6">
+						<div class="step-numb numb3">
+							<span>03</span>
+						</div>
+					</div>
+					<div class="col-xs col-6 offset-lg-1-right">
+						<div class="step-numb numb4">
+							<span>04</span>
+						</div>
+					</div>
+				</div>
 				</div>
 			</form>
 		</section>
@@ -244,21 +495,21 @@
 		<section class="confession">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-3">
-						<img src="img/confession1.jpg" alt="Феникс" class="confession__img img-r">
+					<div class="col-sm-3 col-6">
+						<img src="img/confession1.jpg" alt="Феникс" class="confession__img confession__img_mb10 img-r">
 					</div>
-					<div class="col-lg-3">
-						<img src="img/confession2.jpg" alt="Феникс" class="confession__img img-r">
+					<div class="col-sm-3 col-6">
+						<img src="img/confession2.jpg" alt="Феникс" class="confession__img confession__img_mb10 img-r">
 					</div>
-					<div class="col-lg-3">
+					<div class="col-sm-3 col-6">
 						<img src="img/confession3.jpg" alt="Феникс" class="confession__img img-r">
 					</div>
-					<div class="col-lg-3">
+					<div class="col-sm-3 col-6">
 						<img src="img/confession4.jpg" alt="Феникс" class="confession__img img-r">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-6 offset-lg-5">
+					<div class="col-lg-6 col-md-8 offset-lg-5 offset-md-4 padding">
 						<div class="confession-ttl">
 							<div class="confession-ttl__line confession-ttl__line_l1"></div>
 							<div class="confession-ttl__line confession-ttl__line_l2"></div>
@@ -276,7 +527,7 @@
 		<section class="cargo">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-6 offset-lg-1">
+					<div class="col-lg-6 offset-lg-1 padding">
 						<div class="cargo-ttl clearfix">
 							<div class="cargo-ttl__line cargo-ttl__line_l1"></div>
 							<div class="cargo-ttl__line cargo-ttl__line_l2"></div>
@@ -290,7 +541,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-10 offset-lg-1">
+					<div class="col-lg-10 offset-lg-1 padding">
 						<img src="img/map.png" alt="Феникс" class="cargo-img img-r">
 					</div>
 				</div>
@@ -300,7 +551,7 @@
 		<section class="fenix">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-5 offset-lg-1">
+					<div class="col-lg-5 offset-lg-1 col-md-5 padding">
 						<div class="fenix__note">Феникс</div>
 						<div class="fenix-ttl">
 							<div class="fenix-ttl__line fenix-ttl__line_l1"></div>
@@ -312,7 +563,7 @@
 							<h3 class="fenix-ttl__ttl">Также предоставляем услуги по рестоврации лица и утерянных частей тела после аварий или сильных увечий</h3>
 						</div>
 					</div>
-					<div class="col-lg-5">
+					<div class="col-lg-5 col-md-6 padding">
 						<img src="img/fenix_img.svg" alt="Феникс" class="fenix__img img-r">
 						<div class="fenix__patern"></div>
 					</div>
@@ -323,11 +574,7 @@
 		<section class="confidential">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-6 offset-lg-1">
-						<img src="img/confidential_img.png" alt="Феникс" class="confidential__img img-r">
-						<div class="confidential__patern"></div>
-					</div>
-					<div class="col-lg-4 align-self-center">
+					<div class="col-lg-4 align-self-center col-md-6 padding order-md-2">
 						<div class="confidential-ttl">
 							<div class="confidential-ttl__line confidential-ttl__line_l1"></div>
 							<div class="confidential-ttl__line confidential-ttl__line_l2"></div>
@@ -339,6 +586,10 @@
 							<p class="confidential-ttl__txt">Несем ответсвенность за неразглошение личности покойного и о причине смерти покойного, согласно закона о неразглошении личных данных</p>
 						</div>
 					</div>
+					<div class="col-lg-6 offset-lg-1 col-md-6 padding order-md-1">
+						<img src="img/confidential_img.png" alt="Феникс" class="confidential__img img-r">
+						<div class="confidential__patern"></div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -346,7 +597,7 @@
 		<footer class="foot">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-lg-2 offset-lg-1">
+					<div class="col-lg-2 offset-lg-1 col-md-4 col-sm-6">
 						<h3 class="foot__ttl">Адрес</h3>
 						<p class="foot__addr">Киев, м. "Житомирская"  ул. Ивана Крамского, 16</p>
 						<h3 class="foot__ttl">Наши телефоны</h3>
@@ -354,13 +605,22 @@
 						<a href="tel:+380678473595" class="foot__link">+38 (067) 847-35-95 <i class="wht"></i> <i class="vbr"></i></a>
 						<a href="tel:+380931533480" class="foot__link">+38 (093) 153-34-80</a>
 						<p class="foot__note">Круглосуточно</p>
-						<div class="foot__place">Киев</div>
-						<div class="dev">
+						<div class="foot__place d-none d-sm-block">Киев</div>
+						<div class="dev d-none d-sm-block">
+							<span>Дизайн и разработка</span>
 							<img src="img/uag-logo.svg" alt="uag">
 						</div>
 					</div>
-					<div class="col-lg-9">
+					<div class="col-lg-9 col-md-8 col-sm-6">
 						<div id="map" class="map"></div>
+					</div>
+				</div>
+				<div class="row d-block d-sm-none">
+					<div class="col">
+						<div class="dev">
+							<span>Дизайн и разработка</span>
+							<img src="img/uag-logo.svg" alt="uag">
+						</div>
 					</div>
 				</div>
 			</div>

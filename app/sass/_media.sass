@@ -1,8 +1,8 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
-
+@media (min-width: 1200px)
+	.offset-lg-1-right
+		margin-right: 8.33333%
 
 //Extra large: ≥1440px
 +media-breakpoint-down(xl)
@@ -12,30 +12,257 @@
 
 //Medium: ≥992px max-width: 1199px
 +media-breakpoint-down(md)
+	.padding
+		padding: 0 10px
+	.package
+		&__btn
+			width: auto
+	.confession
+		&-ttl
+			top: 0
+			&:before
+				width: 100vw
+	.confidential
+		overflow: hidden
 
 //Small: ≥768px max-width: 991px
 +media-breakpoint-down(sm)
+	.nav
+		&-phone
+			&__txt
+				font-size: 14px
+	.head
+		&-ttl
+			margin: 0 auto
+	.certificate
+		margin-bottom: 0
+		&__patern
+			top: 20%
+	.package
+		&-left
+			width: 100%
+			float: none
+			overflow: hidden
+		&-right
+			width: 100%
+			float: none
+			margin-top: 20px
+		&__btn
+			max-width: 220px
+		&__ul
+			max-width: 55%
+			padding-left: 20px
+		&__img
+			max-width: 45%
+	.step
+		&__numb
+			left: 10px
+	.confession
+		&-ttl
+			&:before
+				left: 0
+	.fenix
+		&__note
+			left: -55px
+			font-size: 200px
+		&-ttl
+			margin-bottom: 20px
+		&__patern
+			width: 500px
+			height: 500px
+	.foot
+		&__place
+			left: -26px
 
 //Extra small: ≥576px max-width: 767px
 +media-breakpoint-down(xs)
+	.min-h
+		height: auto
+		min-height: auto
+	.head
+		height: auto
+		min-height: auto
+		&-ttl
+			&__txt
+				font-size: 30px
+		&__txt
+			margin: 20px auto 0
+			&_t2
+				margin-bottom: 40px
+	.package
+		&__ul
+			max-width: 100%
+			float: none
+		&__img
+			display: none
+		&-numb
+			margin-right: 5px
+			margin-left: 5px
+			p
+				font-size: 14px
+			span
+				margin-right: 10px
+			&.active
+				span
+					font-size: 44px
+					top: -24px
+	.step
+		&-numb
+			margin-top: 20px
+			margin-right: 5px
+			margin-left: 5px
+			span
+				margin-right: 10px
+			&.active
+				span
+					font-size: 44px
+					top: -24px
+	.confession
+		&__img
+			&_mb10
+				margin-bottom: 10px
+	.fenix
+		&__note
+			font-size: 150px
+	.confidential
+		&__patern
+			top: -210px
+	.foot
+		&__ttl
+			text-align: center
+			margin-bottom: 20px
+		&__addr
+			text-align: center
+			margin-bottom: 50px
+			&:before
+				bottom: -28px
+				right: 0
+				margin-right: auto
+				margin-left: auto
+		&__link
+			text-align: center
+		&__note
+			text-align: center
+			margin-bottom: 40px
+	.map
+		height: 300px
+		margin-bottom: 40px
+	.dev
+		display: table
+		margin: 0 auto 40px
 
 //Extra small: >0 max-width: 575px
 +media-breakpoint-down(xxs)
-
-
-/*==========  Mobile First  ==========*/
-
-//Extra small: <576px
-+media-breakpoint-up(xs)
-
-//Small: ≤576px
-+media-breakpoint-up(sm)
-
-//Medium: ≤768px
-+media-breakpoint-up(md)
-
-//Large: ≤992px
-+media-breakpoint-up(lg)
-
-//Extra large: ≤1200px
-+media-breakpoint-up(xl)
+	.nav
+		&-phone
+			&__txt
+				font-size: 12px
+				margin-bottom: 10px
+			&__link
+				font-size: 14px
+				margin-bottom: 5px
+				&:last-child
+					margin-bottom: 0
+	.head
+		&-ttl
+			padding: 0
+			&__line
+				display: none
+			&__txt
+				font-size: 24px
+				text-align: center
+				span
+					margin: 0 auto 10px
+		&__txt
+			font-size: 16px
+	.certificate
+		&__patern
+			display: none
+		&__ttl
+			margin-top: 0
+		&-form
+			.rline
+				margin: 0 auto 20px
+			&__btn
+				display: block
+				margin: 0 auto
+	.packages
+		&-ttl
+			&__txt
+				width: auto
+				float: none
+	.package
+		padding: 20px
+		&-left
+			padding: 0
+			&__line
+				display: none
+	.form
+		&-ttl
+			padding: 0
+			&:before
+				display: none
+			&__line
+				display: none
+			&__txt
+				margin-bottom: 40px
+	.step
+		background-color: #292c30
+		padding: 80px 10px 20px
+		&__patern
+			display: none
+		&__numb
+			top: 10px
+	.confession
+		&-ttl
+			padding: 0
+			&:before
+				display: none
+			&:after
+				display: none
+			&__line
+				display: none
+			&__ttl
+				font-size: 16px
+				text-transform: none
+				margin-top: 20px
+				text-align: left
+	.cargo
+		&-ttl
+			padding: 0
+			&:before
+				display: none
+			&__line
+				display: none
+			&__ttl
+				font-size: 20px
+			&__txt
+				font-size: 14px
+				float: none
+				margin-bottom: 20px
+	.fenix
+		&__note
+			left: 0
+			font-size: 70px
+		&-ttl
+			padding: 0
+			&:before
+				display: none
+			&__line
+				display: none
+			&__ttl
+				font-size: 20px
+		&__patern
+			width: 350px
+			height: 350px
+	.confidential
+		&-ttl
+			padding: 0
+			&:before
+				display: none
+			&__line
+				display: none
+			&__ttl
+				font-size: 20px
+		&__patern
+			display: none
